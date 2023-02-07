@@ -1,0 +1,113 @@
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+@-webkit-keyframes androidBugfix {
+  from {
+    zoom: 100%;
+  }
+  to {
+    zoom: 99.99999%;
+  }
+}
+
+.header {
+  pointer-events: none;
+}
+
+.header__button,
+.header__lottie {
+  pointer-events: auto;
+}
+
+.left-anim-text__text p {
+  hyphens: auto;
+}
+
+.about__mask--photo {
+  /*-webkit-mask-image: url("https://i.postimg.cc/rsF16vND/image.png") */
+  -webkit-mask-image: url("https://i.postimg.cc/rsF16vND/image.png");
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+}
+
+@media only screen and (max-width: 479px) {
+  .display-none-mobile {
+    display: none;
+  }
+  #vimeo-lightbox-content {
+    height: 27% !important;
+  }
+  .h--252px.is--template {
+    will-change: transform, color;
+    transform: translateZ(0);
+    animation: androidBugfix 0.5s infinite;
+  }
+}
+
+/*   Labs Styles    */
+
+@media screen and (min-width: 480px) {
+  .labs__item:nth-child(5n + 1) {
+    align-self: start;
+    margin-left: 6.37em;
+  }
+  .labs__item:nth-child(5n + 1) .labs__item--content {
+    justify-content: end;
+  }
+  .labs__item:nth-child(5n + 2) {
+    flex-direction: row-reverse;
+  }
+  .labs__item:nth-child(5n + 2) .labs__item--img {
+    width: 44.21em;
+    height: 44.21em;
+  }
+  .labs__item:nth-child(5n + 3) {
+    flex-direction: column;
+  }
+  .labs__item:nth-child(5n + 3) .labs__item--content {
+    width: 27.21em;
+  }
+  .labs__item:nth-child(5n + 4) {
+    align-self: end;
+    flex-direction: row-reverse;
+  }
+  .labs__item:nth-child(5n + 5) {
+    align-self: start;
+  }
+  /* .labs__item:nth-child(5n + 5) .labs__item--img
+  {
+    width: 36.46em ;
+    height: 36.46em ;
+  }
+  */
+  .labs__item:nth-child(2n) .labs__item--content {
+    justify-content: end;
+  }
+}
+
+.labs__item--img {
+  -webkit-mask: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.labs__item--img img {
+  transform-style: preserve-3d;
+  -webkit-mask: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.about__photo {
+  clip-path: circle(50% at 50% 50%);
+}
+
+.projects__item:last-child .project__border {
+  display: none;
+}
+
+.pointer-events-none {
+  pointer-events: none;
+}
